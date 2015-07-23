@@ -28,7 +28,7 @@ class parser
     {
         require FEATHER_ROOT . $class_name . '.php';
     }
-    
+
     public function display()
     {
         global $lang_common, $lang_admin_parser, $lang_admin_common;
@@ -217,7 +217,7 @@ class parser
 
         define('FEATHER_ACTIVE_PAGE', 'admin');
 
-        $this->header->display($page_title);
+        $this->header->setTitle($page_title)->display();
 
         generate_admin_menu('parser');
 
